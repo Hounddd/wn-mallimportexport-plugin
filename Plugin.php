@@ -9,10 +9,13 @@ use Hounddd\MallImportExport\Classes\Registration\BootControllers;
  */
 class Plugin extends PluginBase
 {
-    public $require = ['Offline.Mall'];
-
     use BootEvents;
     use BootControllers;
+
+    /**
+     * @var array Plugin dependencies
+     */
+    public $require = ['Offline.Mall'];
 
     /**
      * Returns information about this plugin.
